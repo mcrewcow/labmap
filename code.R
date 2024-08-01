@@ -1,5 +1,6 @@
 library(leaflet)
 library(htmltools)
+library(htmlwidgets)
 library(geosphere)
 
 # Define the data
