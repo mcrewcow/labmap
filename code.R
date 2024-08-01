@@ -1,5 +1,6 @@
 library(leaflet)
 library(htmltools)
+library(geosphere)
 
 # Define the data
 cities <- data.frame(
