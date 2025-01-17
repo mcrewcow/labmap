@@ -28,10 +28,10 @@ cities <- data.frame(
 
 pins <- data.frame(
   title = c("Jonathan Soucy", "Petr Baranov", "Emil Kriukov", "Volha Malechka", "Nikita Bagaev", 'Aubin Mutschler',
-           'Ekaterina Ivleva'),
-  latitude = c(44.1004, 56.3039, 59.3508, 52.0976, 51.5336, 48.5734,55.4842),
-  longitude = c(-70.2148, 38.5567, 18.0691, 23.7341, 46.0343, 7.7521,37.3058),
-  value = c(6, 6, 6, 6, 6, 6,6)
+           'Ekaterina Ivleva','Sthavir Vinjamuri','Zack Chou',),
+  latitude = c(44.1004, 56.3039, 59.3508, 52.0976, 51.5336, 48.5734,55.4842, 38.9757,37.8706),
+  longitude = c(-70.2148, 38.5567, 18.0691, 23.7341, 46.0343, 7.7521,37.3058, -77.6419,112.5507),
+  value = c(6, 6, 6, 6, 6, 6,6,6,6)
 )
 
 
