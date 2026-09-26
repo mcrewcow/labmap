@@ -5,25 +5,109 @@ library(geosphere)
 
 # Define the data
 cities <- data.frame(
-  title = c("Baranov Lab. Schepens Eye Research Institute, Boston", "Dong Feng Chen Lab. Schepens Eye Research Institute, Boston", 
-            "Lamba Lab. UCSF, San Francisco", "Goldberg Lab. Stanford, Palo Alto", "Samuels Lab. UAB, Birmingham", 
-            "Johnson Lab. Johns Hopkins, Baltimore", "Zack Lab. Johns Hopkins, Baltimore", "Meyer Lab. Indiana University, Indianapolis", 
-            "He Lab. Boston Childrens, Boston", "Sun Lab. Boston Childrens, Boston", "McGregor Lab. Flaum Eye Institute, Rochester", 
-            "Carrier Lab. Northeastern, Boston", "Monaghan Lab. Northeastern, Boston", "InGel Tx, Cambridge", 
-            "Cellino, Cambridge", "Fortune Lab. University of Oregon, Oregon", "Gutmann Lab. Washington University, Saint Louis", 
-            "Gilbert Family Foundation, Detroit", "RRESTORE, Baltimore", "Whited Lab. Harvard University, Cambridge", 
-            "LHON Collective, San Diego", "Reh Lab. University of Washington, Seattle", "Goldman Lab. University of Michigan, Ann Arbor"),
-  latitude = c(42.3601, 42.6, 37.7749, 37.4419, 33.5024, 39.3289, 39.3289, 39.7684, 42.3391, 42.3391, 
-               43.1610, 42.3398, 42.3398, 42.3736, 42.3736, 44.0458, 38.6488, 42.3314, 39.2904, 42.3770, 
-               32.7157, 47.6062, 42.2808),
-  longitude = c(-71.0589, -71.5, -122.4194, -122.1430, -86.8092, -76.6205, -76.6205, -86.1581, -71.1097, -71.1097, 
-                -77.6109, -71.0892, -71.0892, -71.1097, -71.1097, -123.0726, -90.3108, -83.0458, -76.6122, -71.1167, 
-                -117.1611, -122.3321, -83.7430),
-  customText = c("Harvard Medical School", "Harvard Medical School", "UCSF", "Stanford", "UAB", 
-                 "Johns Hopkins", "Johns Hopkins", "Indiana University", "Boston Childrens", "Boston Childrens", 
-                 "Flaum Eye Institute", "Northeastern", "Northeastern", "InGel Tx", 
-                 "Cellino", "University of Oregon", "Washington University", "Gilbert Family Foundation", 
-                 "RRESTORE", "Harvard University", "LHON Collective", "University of Washington", "University of Michigan")
+  title = c(
+    "Baranov Lab. University of Pittsburgh, Pittsburgh",
+    "Dong Feng Chen Lab. Schepens Eye Research Institute, Boston", 
+    "Lamba Lab. UCSF, San Francisco",
+    "Goldberg Lab. Stanford, Palo Alto",
+    "Samuels Lab. UAB, Birmingham", 
+    "Johnson Lab. Johns Hopkins, Baltimore",
+    "Zack Lab. Johns Hopkins, Baltimore",
+    "Meyer Lab. Indiana University, Indianapolis", 
+    "He Lab. Boston Childrens, Boston",
+    "Sun Lab. Boston Childrens, Boston",
+    "McGregor Lab. Flaum Eye Institute, Rochester", 
+    "Carrier Lab. Northeastern, Boston",
+    "Monaghan Lab. Northeastern, Boston",
+    "InGel Tx, Cambridge", 
+    "Cellino, Cambridge",
+    "Fortune Lab. University of Oregon, Oregon",
+    "Gutmann Lab. Washington University, Saint Louis", 
+    "Gilbert Family Foundation, Detroit",
+    "RRESTORE, Baltimore",
+    "Whited Lab. Harvard University, Cambridge", 
+    "LHON Collective, San Diego",
+    "Reh Lab. University of Washington, Seattle",
+    "Goldman Lab. University of Michigan, Ann Arbor"
+  ),
+  
+  latitude = c(
+    40.4444,   # University of Pittsburgh
+    42.3601,   # SERI, Boston
+    37.7749,
+    37.4419,
+    33.5024,
+    39.3289,
+    39.3289,
+    39.7684,
+    42.3391,
+    42.3391,
+    43.1610,
+    42.3398,
+    42.3398,
+    42.3736,
+    42.3736,
+    44.0458,
+    38.6488,
+    42.3314,
+    39.2904,
+    42.3770,
+    32.7157,
+    47.6062,
+    42.2808
+  ),
+  
+  longitude = c(
+    -79.9608,  # University of Pittsburgh
+    -71.0589,  # SERI, Boston
+    -122.4194,
+    -122.1430,
+    -86.8092,
+    -76.6205,
+    -76.6205,
+    -86.1581,
+    -71.1097,
+    -71.1097,
+    -77.6109,
+    -71.0892,
+    -71.0892,
+    -71.1097,
+    -71.1097,
+    -123.0726,
+    -90.3108,
+    -83.0458,
+    -76.6122,
+    -71.1167,
+    -117.1611,
+    -122.3321,
+    -83.7430
+  ),
+  
+  customText = c(
+    "University of Pittsburgh",
+    "Schepens Eye Research Institute / Harvard Medical School",
+    "UCSF",
+    "Stanford",
+    "UAB",
+    "Johns Hopkins",
+    "Johns Hopkins",
+    "Indiana University",
+    "Boston Childrens",
+    "Boston Childrens",
+    "Flaum Eye Institute",
+    "Northeastern",
+    "Northeastern",
+    "InGel Tx",
+    "Cellino",
+    "University of Oregon",
+    "Washington University",
+    "Gilbert Family Foundation",
+    "RRESTORE",
+    "Harvard University",
+    "LHON Collective",
+    "University of Washington",
+    "University of Michigan"
+  )
 )
 
 pins <- data.frame(
@@ -114,4 +198,4 @@ library(leaflet.extras)
 m <- m%>%
   setMapWidgetStyle(list(background= "white"))
 m
-saveWidget(m, "C://Bioinf/lab_map_white_background2.html", selfcontained = TRUE)
+saveWidget(m, "C://Users/rodri/Downloads/lab_map_white_background2.html", selfcontained = TRUE)
